@@ -24,6 +24,12 @@
     <!--link rel="stylesheet" href="../css/material.blue-light_blue.css" type="text/css"-->   
     <link rel="stylesheet" href="../css/swipebox.min.css">
     <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+        <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+
+        <script type="text/javascript" src="connection.js"></script>
+        <script type="text/javascript" src="init.js"></script>
     <!--link rel="stylesheet" href="../css/style.css" -->
 
   <!--[if lte IE 7]>
@@ -38,8 +44,10 @@
 </head>
 <a name="mytop"></a>
 <body>
+        <div id="online">
+        </div>
 <!-- 
-index nav-->
+index nav--> 
 <!--nav id="nav">
 	<div class="ym-wrapper">
 		<div class="ym-hlist">
@@ -107,9 +115,20 @@ index nav-->
 </div>
 </div>
 </div>
-<!--footer>
-	 
-</footer-->
+
+	 <div id="offline-footer">
+            <div id="offline-msg">Lost connection, functionality is limited.</div>
+            <button class="button button-positive" id="go-offline">Offline Mode</button>
+            <button class="button button-positive" id="close-offline">Close</button>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready( function() {
+                onLoad();
+            } );
+        </script>
+
 </body>
 <script type="text/javascript" src="assets/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="assets/js/soundmanager2.js"></script>
@@ -139,4 +158,5 @@ soundManager.setup({
         direction: 'vertical'
     });
     </script>
+	
 </html>
