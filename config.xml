@@ -113,8 +113,8 @@
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="port-xhdpi" />
 
     <icon src="icon.png" />
-
-    <content src="index.html" />
+ 
+    <content src="index.htm" />
     <access origin="*" subdomains="false" />  
     <allow-navigation href="*" /><!-- iOS render iframe content -->
     <!-- https://github.com/phonegap/build/issues/508 -->
